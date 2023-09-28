@@ -27,8 +27,6 @@
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                         &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BSPC &kp RGUI
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -45,26 +43,22 @@
 &trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &trans       &trans    &trans   &trans    &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP  &kp C_BRI_DN &kp C_BRI_UP &trans
                                               &trans            &trans       &trans    &trans   &trans    &trans      &trans    &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
 // -------------------------------------------------------------------------------------------------------------------------
 // |       |        |        |        |        |        |                   |      |       |       |       |       |       |
-// |       |        |        |        |        |        |                   |      |       | PG_DN | PG_UP |       |       |
-// |       |        |        |        |        |        |                   |      |   <-  |   v   |   ^   |  ->   |       |
-// |       |        |        |        |        |        |        |  |       |  +   |   -   |   =   |       |   \   |  "|"  |
+// |       |        |   7    |   8    |   9    |        |                   |      |       | PG_DN | PG_UP |       |       |
+// |       |        |   4    |   5    |   6    |        |                   |      |   <-  |   v   |   ^   |  ->   |       |
+// |       |   0    |   1    |   2    |   3    |        |        |  |       |  +   |   -   |   =   |       |   \   |  "|"  |
 //                           |        |        |        |        |  |       |      |       |       |
             bindings = <
 &trans   &trans   &trans     &trans      &trans      &trans                        &trans      &trans    &trans    &trans    &trans    &trans
-&trans   &trans   &trans     &trans      &trans      &trans                        &trans      &trans    &kp PG_DN &kp PG_UP &trans    &trans
-&trans   &trans   &trans     &trans      &trans      &trans                        &trans      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans
-&trans   &trans   &trans     &trans      &trans      &trans     &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &trans    &kp BSLH  &kp PIPE
+&trans   &trans   &kp N7     &kp N8      &kp N9      &trans                        &trans      &trans    &kp PG_DN &kp PG_UP &trans    &trans
+&trans   &trans   &kp N4     &kp N5      &kp N6      &trans                        &trans      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans
+&trans   &kp N0   &kp N1     &kp N2      &kp N3      &trans     &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &trans    &kp BSLH  &kp PIPE
                              &trans      &trans      &trans     &trans   &trans    &trans      &trans    &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
