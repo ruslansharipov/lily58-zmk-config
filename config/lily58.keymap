@@ -13,16 +13,16 @@
     combos {
         compatible = "zmk,combos";
 
-        caps_word {
-            bindings = <&caps_word>;
+        d_shift_caps_word {
+            bindings = <&d_shift_caps_word>;
             key-positions = <36 49>;
         };
     };
 
     behaviors {
-        caps_word: caps_word {
+        d_shift_caps_word: d_shift_caps_word {
             compatible = "zmk,behavior-caps-word";
-            label = "CAPS_WORD";
+            label = "D_SHIFT_CAPS_WORD";
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
             continue-list = <BACKSPACE UNDERSCORE SPACE RIGHT_ARROW LEFT_ARROW>;
